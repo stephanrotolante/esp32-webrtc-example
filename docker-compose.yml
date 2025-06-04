@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  esp32-development-service:
+    container_name: esp-dev
+    build:
+      context: .
+      dockerfile: EspIdf.Dockerfile
+      args:
+      # change to your username, UID, and GID to prevent the container from overwritting you files with root owner/group permissions
+        USERNAME: stephan
+        USER_UID: 1000
+        USER_GID: 1000
+    # devices:
+      # change this to whatever your machine named the usb device
+      # - /dev/ttyACM0:/dev/ttyACM0
+    volumes:
+      - ./:/app
