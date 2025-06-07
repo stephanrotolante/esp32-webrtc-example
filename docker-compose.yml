@@ -11,8 +11,8 @@ services:
         USERNAME: stephan
         USER_UID: 1000
         USER_GID: 1000
-    # devices:
+    devices:
       # change this to whatever your machine named the usb device
-      # - /dev/ttyACM0:/dev/ttyACM0
+      - /dev/ttyACM0:/dev/ttyACM0
     volumes:
       - ./:/app
