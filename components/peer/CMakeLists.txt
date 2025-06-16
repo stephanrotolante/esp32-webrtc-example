@@ -1,0 +1,18 @@
+file(GLOB ESP32_CODES "/app/deps/libpeer/src/*.c")
+
+idf_component_register(
+  SRCS ${ESP32_CODES}
+  INCLUDE_DIRS "/app/deps/libpeer/src"
+  REQUIRES mbedtls srtp json esp_netif
+)
+
+add_definitions(
+  -DCONFIG_USE_LWIP=1
+  -DCONFIG_USE_USRSCTP=0
+  -DCONFIG_AUDIO_BUFFER_SIZE=8096
+  -DCONFIG_DATA_BUFFER_SIZE=102400
+  -D__BYTE_ORDER=__LITTLE_ENDIAN
+  -DHTTP_DO_NOT_USE_CUSTOM_CONFIG
+  -DMQTT_DO_NOT_USE_CUSTOM_CONFIG
+  -DDISABLE_PEER_SIGNALING=true
+  )

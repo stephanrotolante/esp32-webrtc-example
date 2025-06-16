@@ -37,6 +37,15 @@ RUN cd esp-idf \
 # add this to .bashrc to export vars when you connect
 RUN echo ". /deps/esp-idf/export.sh" >> /home/$USERNAME/.bashrc
 
+RUN git clone --branch v0.0.3 --depth 1 https://github.com/sepfy/libpeer.git
+RUN cd libpeer \ 
+    && git submodule update --init
+
+RUN git clone https://github.com/sepfy/esp_ports.git srtp
+RUN cd srtp \
+    && git checkout b7d4d8ec36f38195b96600705dd4b737fe0d7189 \
+    && git submodule update --init
+
 WORKDIR /app
 
 ENTRYPOINT ["/entrypoint.sh"]
