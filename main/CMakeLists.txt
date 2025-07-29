@@ -1,7 +1,7 @@
 idf_component_register(
     SRCS "main.c" "wifi.c"
     INCLUDE_DIRS "/app/main/"
-    REQUIRES esp_wifi peer)
+    REQUIRES esp_wifi esp_psram peer esp_http_client nvs_flash esp-tls)
 
 
 idf_component_get_property(lib peer COMPONENT_LIB)

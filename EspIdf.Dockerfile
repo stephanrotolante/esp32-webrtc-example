@@ -43,7 +43,7 @@ RUN cd libpeer \
 
 RUN git clone https://github.com/sepfy/esp_ports.git srtp
 RUN cd srtp \
-    && git checkout b7d4d8ec36f38195b96600705dd4b737fe0d7189 \
+    && git checkout f39a4a2c70a4b7d09f9f852a58b5ea39b9c1182c \
     && git submodule update --init
 
 WORKDIR /app
