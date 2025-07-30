@@ -297,7 +297,7 @@ void app_main(void) {
   }
 
   esp_http_client_config_t config = {
-      .url = "http://192.168.1.201:8080/whip",
+      .url = (char *)WHIP_URL,
       .transport_type = HTTP_TRANSPORT_OVER_TCP,
       .event_handler = http_event_handler,
   };
