@@ -37,8 +37,9 @@ RUN cd esp-idf \
 # add this to .bashrc to export vars when you connect
 RUN echo ". /deps/esp-idf/export.sh" >> /home/$USERNAME/.bashrc
 
-RUN git clone --branch v0.0.3 --depth 1 https://github.com/sepfy/libpeer.git
+RUN git clone https://github.com/stephanrotolante/libpeer.git
 RUN cd libpeer \ 
+    && git checkout fix/bad-udp-payload \
     && git submodule update --init
 
 RUN git clone https://github.com/sepfy/esp_ports.git srtp
