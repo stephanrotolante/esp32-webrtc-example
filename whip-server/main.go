@@ -70,10 +70,13 @@ func whipHandler(res http.ResponseWriter, req *http.Request) {
 	}
 
 	s := webrtc.SettingEngine{}
+
+	// restrict interfaces to reduces size of SDP
 	s.SetInterfaceFilter(func(s string) (keep bool) {
 		return s == "enp2s0"
 	})
 
+	// restrict scoket types to reduces size of SDP
 	s.SetNetworkTypes([]webrtc.NetworkType{
 		webrtc.NetworkTypeUDP4,
 	})
