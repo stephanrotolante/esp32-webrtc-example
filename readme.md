@@ -87,6 +87,6 @@ idf.py -p /dev/ttyACM0 flash monitor
 Open your browser and subscribe to the video
 
 <video width="640" height="480" controls>
-  <source src="assets/video.mov" type="video/quicktime">
+  <source src="assets/video.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
