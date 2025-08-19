@@ -86,7 +86,4 @@ idf.py -p /dev/ttyACM0 flash monitor
 ### 7. See video stream to your browser
 Open your browser and subscribe to the video
 
-<video width="640" height="480" controls>
-  <source src="assets/video.mp4">
-  Your browser does not support the video tag.
-</video>
+[See example vidoe](assets/video.mp4)
