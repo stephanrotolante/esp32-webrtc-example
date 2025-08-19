@@ -86,4 +86,4 @@ idf.py -p /dev/ttyACM0 flash monitor
 ### 7. See video stream to your browser
 Open your browser and subscribe to the video
 
-[See example video](assets/video.mp4)
+https://github.com/user-attachments/assets/5c853952-081d-4922-9b47-3c0f3285ba7e
