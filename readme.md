@@ -83,7 +83,7 @@ s.SetInterfaceFilter(func(s string) (keep bool) {
 idf.py -p /dev/ttyACM0 flash monitor
 ```
 
-### 7. See video stream to your browser
+### 7. See video stream in your browser
 Open your browser and subscribe to the video
 
 https://github.com/user-attachments/assets/5c853952-081d-4922-9b47-3c0f3285ba7e
